@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+    <!-- Firebase SDK? -->
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Firebase Login</h2>
+
+        <div id="auth-section">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Enter your password">
+            <button id="signup">Sign Up</button>
+            <button id="signin">Sign In</button>
+        </div>
+
+        <div id="user-section" style="display: none;">
+            <p id="user-info"></p>
+            <button id="signout">Sign Out</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+</body>
+</html>
