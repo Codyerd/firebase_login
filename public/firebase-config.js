@@ -1,6 +1,7 @@
 // Import Firebase SDK functions
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification, sendSignInLinkToEmail, isSignInWithEmailLink,
+    RecaptchaVerifier, deleteUser, PhoneAuthProvider, multiFactor } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -17,5 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Export auth to use in other files
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut };
+// Export Firebase services
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification,
+    sendSignInLinkToEmail, isSignInWithEmailLink, deleteUser, RecaptchaVerifier, PhoneAuthProvider, multiFactor };
